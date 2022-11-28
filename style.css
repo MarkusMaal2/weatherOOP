@@ -9,4 +9,10 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
+    flex-direction: column;
+}
+
+hr {
+    width: 25%;
+    border: solid 0.25vh gray;
 }
