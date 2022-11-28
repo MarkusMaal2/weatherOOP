@@ -1,5 +1,9 @@
+// Create LS object
+const ls = new LS()
+// initialize city name
+const initialCity = ls.getCity()
 // Create weather object
-const weather = new Weather("Tallinn")
+const weather = new Weather(initialCity)
 // UI object
 const ui = new UI()
 
@@ -21,8 +25,9 @@ function getWeather() {
 function changeWeather(e) {
     const city = document.querySelector("#city-name").value
     weather.changeCity(city)
-    document.querySelector("#city-name").value = "";
+    ls.setCity(city)
     getWeather()
+    document.querySelector("#city-name").value = "";
     e.preventDefault()
 }
 
